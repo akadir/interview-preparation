@@ -37,7 +37,7 @@ public class Main {
                 "cats", "man", "super", "antman", "godzilla", "dog", "dot",
                 "sine", "cos", "signal", "bitcoin", "cool", "zapper"};
 
-        Character[][] boggle = {
+        char[][] boggle = {
                 {'c', 'n', 't', 's', 's'},
                 {'d', 'a', 't', 'i', 'n'},
                 {'o', 'o', 'm', 'e', 'l'},
@@ -60,7 +60,7 @@ public class Main {
 
     }
 
-    public static void dfs(Pair<Integer, Integer> startedFrom, Pair<Integer, Integer> currentPoint, Character[][] boggle,
+    public static void dfs(Pair<Integer, Integer> startedFrom, Pair<Integer, Integer> currentPoint, char[][] boggle,
                            String currentWord, TrieNode root, Set<String> visited, List<Direction> directions) {
         int x = currentPoint.getKey();
         int y = currentPoint.getValue();
@@ -101,7 +101,7 @@ public class Main {
         visited.remove(x + "-" + y);
     }
 
-    public static List<Direction> getNeighbours(Character[][] boggle, int x, int y) {
+    public static List<Direction> getNeighbours(char[][] boggle, int x, int y) {
         List<Direction> neighbours = new ArrayList<>();
 
         for (Direction direction : Direction.values()) {
