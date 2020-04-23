@@ -6,11 +6,11 @@ import java.util.List;
 /**
  * @author akadir
  * Date: 23.04.2020
- * Time: 20:55
+ * Time: 20:59
  */
 public class ScreenLock {
 
-    private class Point {
+    private static class Point {
         int x;
         int y;
 
@@ -51,7 +51,7 @@ public class ScreenLock {
         }
     }
 
-    private char[][] lockScreen = {
+    private final char[][] lockScreen = {
             {'A', 'B', 'C'},
             {'D', 'E', 'F'},
             {'G', 'H', 'I'}
@@ -68,7 +68,7 @@ public class ScreenLock {
         for(int i = 0; i < lockScreen.length; i++){
             for(int j = 0; j < lockScreen[i].length; j++){
                 if(startPosition == lockScreen[i][j]) {
-                    start = new Point(i,j);
+                    start = new Point(i, j);
                     break outerLoop;
                 }
             }
